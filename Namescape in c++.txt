@@ -1,0 +1,54 @@
+NAMESPACE:
+
+
+->It is a declarative region that provides a scope to the IDENTIFIERS
+inside it.
+here, Identifiers are name of types, functions, variable, etc
+->It prevents name collisions that can occur especially when the
+code base includes multiples libraries. for eg: we want to use 
+cout to print that is defined in stardard library, but if there
+is another cout in different library, so here we have to use namespace
+to tell the complier that to take cout from standard library.
+-> std::cout << "What we have to print!";
+   a):: is the scope operator.
+   b)std:: prefix tells that cout is defined in the namespace names
+     std.
+
+Here is the example:
+
+#include <iostream>
+
+
+
+//3 way
+//using namespace std;
+// if we are using cout and cin from other libraries then this wont work.
+
+//2 way
+//using std::cout;
+//using std::cin;
+//using std::endl;
+//
+
+int main() {
+    
+    int x;
+
+    //1 way
+    //std::cout << "Hello, this is my first c++ program!";
+    //
+
+    //2 way
+    //cout << "Number x: ";
+    //cin >> x;
+    //cout << "We get: " << x << endl;
+    //
+
+    //3 way
+    //cout << "please enter: ";
+    //cin >> x;
+    //cout << "The number is " << x << endl;
+    //
+
+    return 0;
+}

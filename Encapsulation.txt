@@ -1,0 +1,88 @@
+ENCAPSULATION
+
+In C++, encapsulation is one of the four fundamental principles of 
+object-oriented programming (OOP), along with inheritance, polymorphism, 
+and abstraction. Encapsulation is the concept of bundling data 
+(attributes or properties) and the methods (functions or behaviors) that operate 
+on that data into a single unit called a class. This unit acts as a protective 
+wrapper, keeping the data safe from external interference and misuse.
+
+Here are the key aspects of encapsulation in C++:
+
+Data Hiding: Encapsulation allows you to hide the internal implementation details 
+of a class's data. This means that the data members of a class are typically 
+marked as private or protected, making them inaccessible from outside the class.
+
+Access Control: In C++, classes provide mechanisms to control how the internal 
+data can be accessed and modified. This is done through access specifiers:
+
+public: Members declared as public are accessible from any part of the program. 
+These are typically the methods that provide a public interface for interacting 
+with the class.
+private: Members declared as private are not accessible from outside the class. 
+They are used to store the internal state of the object.
+protected: Similar to private members but with limited access to derived classes.
+Getters and Setters: To interact with the private data members of a class, you can 
+define public member functions (often referred to as "getters" and "setters") that 
+allow controlled access to the data. These functions enable you to read and 
+modify the data while enforcing validation and business rules if needed.
+
+Here's a simple example in C++ that illustrates encapsulation:
+
+class BankAccount {
+private:
+    double balance; // Private data member
+
+public:
+    // Constructor
+    BankAccount(double initialBalance) {
+        balance = initialBalance;
+    }
+
+    // Public method to get the balance
+    double getBalance() {
+        return balance;
+    }
+
+    // Public method to deposit money
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    // Public method to withdraw money
+    void withdraw(double amount) {
+        if (amount > 0 && balance >= amount) {
+            balance -= amount;
+        }
+    }
+};
+
+In this example, the balance data member is private, and the class provides public 
+methods (getBalance, deposit, and withdraw) to interact with it. This encapsulation 
+ensures that the balance can only be accessed and modified through the defined 
+methods, allowing you to control and validate transactions involving the bank 
+account's balance.
+
+Encapsulation helps maintain data integrity, provides a clear and controlled 
+interface to the class, and promotes the separation of concerns in your code, 
+making it easier to understand, maintain, and extend.
+
+Encapsulation maintains high cohesion within a class and low coupling between the 
+class' implementation and any one of its clients.
+
+cout refers to the standard output object. Its class defines how to store the 
+object's data in memory and how to control the operations that work with that 
+data. The << operator copies the string to the output object without exposing 
+any of the implementation details. As client programmers, we only see the 
+interface that manages the output process.
+
+A well-encapsulated class hides all implementation details within itself. The 
+client does not see the data that the class' object stores within itself or the 
+logic that it uses to manage its internal data. The client only sees a clean and 
+simple interface to the object.
+
+As long as the classes in a programming solution are well-encapsulated, any 
+programmer can upgrade the internal structure of any object developed by another 
+programmer without changing any client code.

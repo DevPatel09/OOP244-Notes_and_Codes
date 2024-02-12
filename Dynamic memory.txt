@@ -1,0 +1,34 @@
+DYNAMIC MEMORY:
+->Dynamic memory in C++ refers to the memory allocation and management mechanism 
+that allows you to allocate and deallocate memory during the runtime of a program. 
+Unlike static memory, which is allocated at compile-time and has a fixed size, 
+dynamic memory is allocated at runtime and can change in size as needed.
+
+->since new ask the OS to give them 4 bytes, so that i can use after the program has
+started executing during runtime.
+
+->new operator returns is a memory address, so in order to access the new variable 
+we have to store that memory address somewhere, so we use pointers.
+
+->It's crucial to release dynamically allocated memory using delete when you're 
+done with it to prevent memory leaks.
+
+->The main use of the concept of dynamic memory allocation is for allocating arrays when we have to declare an array by specifying its size but are not sure about the size.
+
+->If we allocate the memory of 20 for a char array i.e char name[20];
+but the input is of only 12 characters then the other space will be waste
+therefore use the concept of DMA.
+
+
+TYPES OF MEMORY ALLOCATION:
+1)Static Memory Allocation:-
+-> memory is alloacted at compile-time,  reffered to as static memory alloaction.
+->A fixed space is allocated for the local variables, function calls, and local statements, that can not be changed during the execution of the program.
+->We can not allocate or de-allocate a memory block once the execution of the program starts.
+->We can't re-use the static memory while the program is running. As a result, it is less effective.
+
+2)Dynamic Memory Alloction:-
+->When memory is allocated or de-allocated during run-time, it is referred to as Dynamic Memory Allocation in C++.
+->A variable space is allocated that can be changed during the execution of the program.
+->We use dynamic/heap memory to allocate and de-allocate a block of memory during the execution of the program using new and delete operators.
+->We can re-use our heap memory during the run-time of our program. As a result, it is highly effective.

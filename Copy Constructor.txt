@@ -1,0 +1,8 @@
+the key difference lies in when they are called and their intended use cases:
+
+->The copy constructor is used to create a new object as a copy of an existing 
+object when the new object is being initialized.
+
+->The copy assignment operator is used to modify an existing object to match the 
+contents of another existing object. It's called explicitly when assigning one 
+object to another. It should also check for self-assignment to avoid issues.

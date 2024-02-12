@@ -1,0 +1,15 @@
+1)A derived class does not inherit the base class' special functions: constructors, destructors or assignment operators. 
+
+2)class Derived : access Base {
+
+    // ...
+
+};
+
+ The default access is private.
+
+3)Public Inheritance − When deriving a class from a public base class, public members of the base class become public members of the derived class and protected members of the base class become protected members of the derived class. A base class's private members are never accessible directly from a derived class, but can be accessed through calls to the public and protected members of the base class.
+
+Protected Inheritance − When deriving from a protected base class, public and protected members of the base class become protected members of the derived class.
+
+Private Inheritance − When deriving from a private base class, public and protected members of the base class become private members of the derived class.

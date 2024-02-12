@@ -1,0 +1,75 @@
+->cout in included in stantard library.
+-> A class is a blueprint or template for creating objects.  It defines the structure and behavior of objects that belong to that class. In the context of encapsulation, a class encapsulates both the state (attributes) and logic (methods) associated with a particular type or concept
+->We say that each object is an instance of its class.
+
+
+Data Variables:
+->We call the data members in the class definition the object's instance variables. 
+->Instance variables may be of:
+
+Fundamental type (int, double, char, etc.)
+Compound type
+Class type (struct or class)
+Pointer type (to instances of data types - fundamental or compound)
+Reference type (to instances of data types - fundamental or compound)
+
+
+->When we make a object and if we dont pass any parameters while 
+making that object, then defualt constructer will automatically 
+called.
+->for eg: class and object
+here, if we make class as student and object is s1,s2,s3
+class inshort is a user defined datatype
+
+DESTRUCTOR
+->There is a destructor which is automatically called when the
+object is destroyed.
+-> Starts with ~
+->we cant pass any parameters and it returns nothing.
+-> for eg: it called after the main function  
+
+
+ABSTRACTION:
+
+->In OOP, abstraction involves designing solutions using objects as the primary building blocks.
+Each object represents a real-world entity or concept and encapsulates both its data
+ (attributes) and behavior (methods or functions).
+Abstraction in OOP means focusing on the most important features of an object, 
+making them public and accessible, while hiding the less important or complex 
+details within the object itself. This concept is known as encapsulation.
+Objects have clear conceptual boundaries, and they interact with other objects 
+through well-defined interfaces (public methods).
+Objects provide a way to model and work with real-world entities in a way that's 
+intuitive and organized.
+
+->Examples of OOP Abstraction:
+
+The passage provides two examples: a book and a set of notes.
+A book object represents a physical book with bound pages and a fixed page order.
+ It abstracts the key characteristics of a book, such as flipping pages.
+A set of notes object represents loose pages that can be rearranged in any order,
+ abstracting the key characteristics of a set of notes.
+cout and cin Objects:
+
+The passage mentions cout and cin objects, which are part of the C++ Standard 
+Library and are used for input and output operations.
+These objects illustrate the concept of abstraction. Externally, users interact 
+with cout to output data and cin to input data. The abstraction provided to users
+ is straightforward—the standard output device and the standard input device.
+Internally, the implementation of these objects is complex, as they can interact 
+with various output and input devices depending on the system configuration. 
+However, this complexity is hidden from the user, allowing for a simplified and 
+consistent interface.
+
+->In summary, abstraction is a fundamental concept in both C programming and 
+object-oriented programming. In C, it involves abstracting common code into 
+functions or structures. In OOP, it involves abstracting real-world entities into 
+objects, exposing their important features, and encapsulating complex details 
+internally. This abstraction helps create organized, modular, and maintainable 
+code.
+
+
+
+CLASS PRIVACY:
+->C++ compilers apply privacy at the class level. 
+-> privacy is not implemented at the individual object level.

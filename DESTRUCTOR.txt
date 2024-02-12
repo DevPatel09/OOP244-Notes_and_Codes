@@ -1,0 +1,81 @@
+DESTRUCTOR:
+
+->Destructors in C++ are special member functions that are automatically invoked 
+when an object goes out of scope, meaning its lifetime ends. The primary purpose 
+of a destructor is to clean up any resources or perform any necessary cleanup 
+actions associated with an object before it is destroyed. Here are some key 
+points to understand about destructors:
+
+->Automatic Invocation: Destructors are called automatically by the C++ runtime 
+system when an object's scope ends. You don't need to explicitly call a destructor; 
+it's invoked implicitly. This makes sure that the cleanup operations are 
+performed automatically when the object is no longer needed.
+
+
+->Name and Syntax: The name of a destructor is the same as the name of the class, 
+preceded by a tilde (~). The syntax for a destructor is as follows:
+  ~Type();
+Here, Type is the name of the class for which the destructor is defined. 
+Destructors have no parameters and no return values. They are not like regular 
+functions that you call with arguments; they are called automatically when their 
+associated objects are destroyed.
+
+->Multiple Destructors: In C++, you can only have one destructor for a class. 
+Overloading or defining multiple destructors with different parameter lists is 
+not allowed. The compiler knows which destructor to call based on the object's 
+type.
+
+>Resource Cleanup: Destructors are typically used to clean up resources that were acquired
+ by the object during its lifetime. This could include releasing dynamically 
+allocated memory (e.g., using delete for pointers), closing open files, releasing
+ network connections, or any other cleanup actions specific to the object's 
+responsibilities.
+
+class MyObject {
+public:
+    MyObject() {
+        // Constructor: Initialize resources or perform setup here
+    }
+
+    ~MyObject() {
+        // Destructor: Clean up resources before the object is destroyed
+        // e.g., deallocate memory, close files, etc.
+    }
+};
+
+
+->In this example, when an instance of MyObject goes out of scope (e.g., when a local variable 
+goes out of scope at the end of a function), its destructor is automatically 
+called, allowing you to release any resources or perform cleanup operations 
+necessary to maintain the integrity of your program.
+
+
+->Using destructors is important for resource management, especially in cases 
+where objects manage resources like memory or file handles, as it ensures that 
+these resources are properly released when they are no longer needed
+
+
+->Execution of the Destructor: When an object's lifetime comes to an end (e.g., 
+when it goes out of scope or when it's explicitly deleted), the first step is to 
+execute the object's destructor. The destructor is a special member function of
+ a class that is responsible for cleaning up resources or performing any 
+necessary finalization actions associated with the object.
+
+
+->Deallocation of Memory: After the destructor logic is executed, memory allocated 
+for each instance variable is deallocated. The order of deallocation is the 
+reverse of the order in which the instance variables are listed in the class 
+definition. In other words, the last instance variable declared in the class is 
+deallocated first, followed by the second-last, and so on.
+
+
+->Member Function Calls: It's important to note that an object's destructor starts 
+executing only after every normal member function of that object has completed 
+its execution. This ensures that any required cleanup actions or resource 
+releases within member functions can be performed before the object is destroyed.
+
+
+->Client Code and Destructor: Once an object's destructor has been called and the 
+object has gone out of scope or has been explicitly deleted, client code cannot 
+call any member functions on that object. Attempting to do so would result in 
+undefined behavior because the object has already been destroyed.
